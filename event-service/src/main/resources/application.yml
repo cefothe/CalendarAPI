@@ -1,6 +1,18 @@
 spring:
   application:
     name: event-service
+  batch:
+    initialize-schema: always
+  datasource:
+    password: my-secret-pw
+    url: jdbc:mysql://localhost:3306/events?createDatabaseIfNotExist=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 eureka:
   client:
     serviceUrl:
