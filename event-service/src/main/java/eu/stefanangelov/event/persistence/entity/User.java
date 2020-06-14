@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-@NoArgsConstructor
 @Data
 @Entity
 public class User extends BaseEntity{

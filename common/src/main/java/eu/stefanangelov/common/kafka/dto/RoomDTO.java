@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class RoomDTO {
-    private UUID id;
+    private String id;
     private String name;
 }

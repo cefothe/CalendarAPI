@@ -1,8 +1,8 @@
 package eu.stefanangelov.room.controller;
 
+import eu.stefanangelov.common.kafka.dto.RoomDTO;
 import eu.stefanangelov.room.services.RoomService;
 import eu.stefanangelov.room.services.dto.CreateUpdateRoomDTO;
-import eu.stefanangelov.room.services.dto.RoomDTO;
 import java.time.LocalDateTime;
 import java.util.List;
 import javax.validation.Valid;

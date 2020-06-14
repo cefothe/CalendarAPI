@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EventRepository extends CrudRepository<Event, String> {
-    boolean existsByAvailabilitiesFromDateLessThanEqualAndAvailabilitiesToDateGreaterThanEqualAndRoomId(LocalDateTime from, LocalDateTime to, String id);
+    boolean existsByAvailabilityFromDateLessThanEqualAndAvailabilityToDateGreaterThanEqualAndRoomId(LocalDateTime from, LocalDateTime to, String id);
 }

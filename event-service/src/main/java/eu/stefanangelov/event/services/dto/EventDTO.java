@@ -1,5 +1,6 @@
 package eu.stefanangelov.event.services.dto;
 
+import eu.stefanangelov.common.kafka.dto.RoomDTO;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.Data;

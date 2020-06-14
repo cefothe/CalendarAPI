@@ -23,7 +23,7 @@ public class EventService {
 
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
     public EventDTO createEvent(CreateUpdateEvent createUpdateEvent) {
-		var roomAvailable = eventRepository.existsByAvailabilitiesFromDateLessThanEqualAndAvailabilitiesToDateGreaterThanEqualAndRoomId(createUpdateEvent.getFrom(),
+		var roomAvailable = eventRepository.existsByAvailabilityFromDateLessThanEqualAndAvailabilityToDateGreaterThanEqualAndRoomId(createUpdateEvent.getFrom(),
 			createUpdateEvent.getTo(), createUpdateEvent.getRoom());
 
 		return null;
