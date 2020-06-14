@@ -1,0 +1,8 @@
+rootProject.name = 'CalendarAPI'
+include 'eureka-service'
+include 'config-service'
+include 'api-gateway'
+include 'event-service'
+include 'room-service'
+include 'authenication-service'
+
