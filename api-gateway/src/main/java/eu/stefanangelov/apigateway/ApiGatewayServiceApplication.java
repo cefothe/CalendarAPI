@@ -24,6 +24,9 @@ public class ApiGatewayServiceApplication {
             .route(r -> r.path("/rooms/**")
                 .uri("lb://ROOM-SERVICE")
                 .id("roomService"))
+            .route(r ->r.path("/events/**")
+                .uri("lb://EVENT-SERVICE")
+                .id("eventService"))
             .build();
     }
 }

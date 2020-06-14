@@ -1,6 +1,6 @@
 package eu.stefanangelov.event.services;
 
-import eu.stefanangelov.event.services.dto.CreateUpdateEvent;
+import eu.stefanangelov.common.kafka.dto.CreateUpdateEvent;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -8,7 +8,6 @@ import eu.stefanangelov.event.persistence.repository.EventRepository;
 import eu.stefanangelov.event.services.dto.EventDTO;
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

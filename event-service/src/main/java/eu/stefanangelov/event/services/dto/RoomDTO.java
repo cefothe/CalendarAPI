@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class RoomDTO {
 	private String id;
-	private String username;
+	private String name;
 }

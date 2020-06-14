@@ -1,7 +1,7 @@
 package eu.stefanangelov.event.controller;
 
 
-import eu.stefanangelov.event.services.dto.CreateUpdateEvent;
+import eu.stefanangelov.common.kafka.dto.CreateUpdateEvent;
 import java.time.LocalDateTime;
 import java.util.List;
 

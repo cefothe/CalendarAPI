@@ -12,4 +12,9 @@ import lombok.RequiredArgsConstructor;
 @Entity
 public class User extends BaseEntity{
 	private String username;
+
+	public User(String id, String username) {
+		this.setId(id);
+		this.username = username;
+	}
 }

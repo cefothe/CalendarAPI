@@ -8,6 +8,7 @@ import eu.stefanangelov.room.services.dto.CreateUpdateRoomDTO;
 import eu.stefanangelov.room.services.dto.RoomDTO;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -34,9 +35,13 @@ public class RoomService {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public RoomDTO createRoom(CreateUpdateRoomDTO roomDTO) {
-        var room = roomRepository.save(new Room(roomDTO.getName(), new ArrayList<>()));
+        var room = roomRepository.save(new Room(roomDTO.getName(), new HashSet<>()));
 		var createdRoom = new RoomDTO(UUID.fromString(room.getId()), room.getName());
         kafkaTemplate.send(ROOM_EVENT,createdRoom);
         return new RoomDTO(UUID.fromString(room.getId()), room.getName());
+    }
+
+    public void updateAvailability(CreateUpdateRoomDTO createUpdateRoomDTO) {
+
     }
 }
