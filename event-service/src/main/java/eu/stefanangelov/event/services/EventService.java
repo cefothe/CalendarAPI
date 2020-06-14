@@ -1,6 +1,7 @@
 package eu.stefanangelov.event.services;
 
 import eu.stefanangelov.common.kafka.dto.CreateUpdateEvent;
+import eu.stefanangelov.event.services.exception.EventConflictException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -25,7 +26,9 @@ public class EventService {
     public EventDTO createEvent(CreateUpdateEvent createUpdateEvent) {
 		var roomAvailable = eventRepository.existsByAvailabilityFromDateLessThanEqualAndAvailabilityToDateGreaterThanEqualAndRoomId(createUpdateEvent.getFrom(),
 			createUpdateEvent.getTo(), createUpdateEvent.getRoom());
-
+		if(roomAvailable){
+			throw new EventConflictException("Room is not available at that interval");
+		}
 		return null;
 	}
 }
