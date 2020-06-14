@@ -5,4 +5,5 @@ include 'api-gateway'
 include 'event-service'
 include 'room-service'
 include 'authenication-service'
+include 'common'
 
