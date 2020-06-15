@@ -14,7 +14,7 @@ public class UserConsumer {
 
     private final UserService userService;
 
-    @KafkaListener(id = "UserConsumer", topics = USER_EVENT)
+    @KafkaListener(id = "UserConsumer", topics = USER_EVENT, containerFactory = "runningListenerContainerFactory")
     public void listen(@Payload UserCreateDTO userCreateDTO){
         userService.createOrUpdate(userCreateDTO);
     }

@@ -49,8 +49,8 @@ public class AuthenticationService {
         }
         var user = new User(createUserDto.getUsername(), passwordEncoder.encode(createUserDto.getPassword()), createUserDto.getEmail(),
             Set.of(role));
+        user = userRepository.save(user);
         kafkaTemplate.send(Topics.USER_EVENT, new UserCreateDTO(user.getId(), user.getUsername()));
-        userRepository.save(user);
     }
 
     public JwtResponseDTO signin(LoginRequestDTO loginRequestDTO) {
