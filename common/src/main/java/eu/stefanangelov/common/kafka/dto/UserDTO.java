@@ -1,7 +1,9 @@
-package eu.stefanangelov.event.services.dto;
+package eu.stefanangelov.common.kafka.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
+@AllArgsConstructor
 @Data
 public class UserDTO {
 	private String id;

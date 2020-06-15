@@ -4,10 +4,11 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Embeddable;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Data
 @Embeddable
 public class Availability {

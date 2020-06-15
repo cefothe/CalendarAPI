@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import eu.stefanangelov.event.services.EventService;
-import eu.stefanangelov.event.services.dto.EventDTO;
+import eu.stefanangelov.common.kafka.dto.EventDTO;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.HttpStatus;
